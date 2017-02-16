@@ -1,0 +1,19 @@
+{
+  "name": "reactstickynotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarathi0333/reactStickyNotes.git"
+  },
+  "author": "sarath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarathi0333/reactStickyNotes/issues"
+  },
+  "homepage": "https://github.com/sarathi0333/reactStickyNotes#readme"
+}
