@@ -22,7 +22,7 @@ var config = {
         }
       }, {
         test: /\.s?css$/,
-        loader: ['style', 'css', 'sass'],
+        loader: ["style-loader", "css-loader"],
         include: SRC_DIR
       }
     ]
