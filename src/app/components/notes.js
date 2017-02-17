@@ -16,6 +16,7 @@ export class Notes extends React.Component {
          <div className="noteContainer card blue-grey darken-1">
             <div className="noteText card-content white-text">
               <span className="card-title">{this.props.children}</span>
+              
             </div>
          </div>
         </div>
