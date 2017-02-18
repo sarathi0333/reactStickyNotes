@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from "react-dom";
-
+import Draggable from 'react-draggable';
 
 require("./Style.css");
 
@@ -24,19 +24,21 @@ export class Notes extends React.Component {
   }
   renderNormal () {
     return (
-      <div className="container">
-        <div className="text">{this.props.children} </div>
-        <button onClick={this.edit.bind(this)}>Edit</button>
-        <button onClick={this.remove.bind(this)}>Remove</button>
+      <div className="note">
+        <label>Note</label>
+        <div className="out-txt">{this.props.children} </div>
+        <span onClick={this.edit.bind(this)} className="glyphicon glyphicon-pencil edit-btn" ></span>
+        <span className="glyphicon glyphicon-trash trash-btn" onClick={this.remove.bind(this)}></span>
       </div>
+     
     )
   }
   renderForm () {
     return (
-      <div className="container">
+      <div className="note">
         <label>Note</label>
         <textarea ref="newText" defaultValue={this.props.children}></textarea>
-        <button onClick={this.save.bind(this)}>Save</button>
+        <span className="glyphicon glyphicon-floppy-disk save-btn" onClick={this.save.bind(this)}></span>
       </div>
     )
   }

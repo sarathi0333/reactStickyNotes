@@ -2,6 +2,9 @@ import React from "react";
 import { render } from "react-dom";
 import { Notes } from "../components/Notes.jsx";
 
+require("./Style.css");
+
+
 export class Root extends React.Component {
   constructor() {
     super();
@@ -37,11 +40,15 @@ export class Root extends React.Component {
   }
   render() {
     return (
-      <div> 
-       <button className="btn btn-success btn-circle glyphicon glyphicon-plus" onClick={this.add.bind(this,"enter text")}></button>
-         {
-           this.state.notes.map(this.eachNotes.bind(this))
-         }
+      <div className="sticki-note">
+        <div className="note-container"> 
+          <div className="plus">
+            <button className="btn btn-warning btn-circle glyphicon glyphicon-plus" onClick={this.add.bind(this,"enter text")}></button>
+          </div>
+          {
+            this.state.notes.map(this.eachNotes.bind(this))
+          }
+        </div>
       </div>
     )
   }
